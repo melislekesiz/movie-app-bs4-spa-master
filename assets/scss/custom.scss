@@ -1,0 +1,139 @@
+// custom.scss
+
+@import 'variables';
+
+//then bootstrap & bootstrap-vue should be added after
+//so that they inherit the custom SCSS variables
+@import 'bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-vue/src/index.scss';
+
+//all other custom scss files or css should be added here
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+// xs: 0,
+// sm: 576px,
+// md: 768px,
+// lg: 992px,
+// xl: 1200px
+
+@media only screen and (max-width: 576px) {
+    .movie-card {
+        display: flex;
+    }
+
+    .movie-card .movie-poster {
+        max-width: 100px;
+        margin-right: 1rem;
+    }
+
+    .movie-poster {
+        max-width: 300px;
+        margin-right: 1rem;
+    }
+
+    .movie-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movie-details__title {
+
+    }
+
+    .movie-details__info {
+
+    }
+
+    .movie-details__genres {
+
+    }
+
+    .movie-details__info__stars {
+
+    }
+    .movie-details__info__separator {
+
+    }
+    .movie-details__info__release_date {
+
+    }
+
+    .crew-container {
+        flex-direction: column;
+    }
+}
+
+.crew-box {
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* width */
+.movie-cast__scroll::-webkit-scrollbar {
+    height: .5rem;
+    width: .5rem;
+    // border: 1px solid #d5d5d5;
+    border-radius: 5px;
+}
+
+/* Track */
+.movie-cast__scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.movie-cast__scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+.movie-cast__scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.movie-page .movie-info .movie-poster {
+    max-height: 500px;
+}
+
+.movie-page__header__title {
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .movie-card .movie-poster {
+        max-width: 100px;
+        margin-right: 1rem;
+    }
+
+    .movie-poster {
+        max-width: 300px;
+        margin-right: 1rem;
+    }
+
+    .movie-info {
+        flex-direction: column;
+    }
+
+    .movie-info__poster-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .movie-info__details {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+.movie-info__poster-container {
+    justify-content: center;
+}
+
+.movie-info__details {
+    padding-left: 1rem;
+    flex: 1;
+}
